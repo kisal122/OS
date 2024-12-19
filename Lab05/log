@@ -1,0 +1,90 @@
+/home/tarkaelkion/Lab05
+example1.c
+example2.c
+example3.c
+example4.c
+example5.c
+example6.c
+log
+.
+..
+example1.c
+example2.c
+example3.c
+example4.c
+example5.c
+example6.c
+log
+mkdir: cannot create directory ‘new_folder’: File exists
+  File: example1.c
+  Size: 485       	Blocks: 8          IO Block: 4096   regular file
+Device: 811h/2065d	Inode: 1354794     Links: 1
+Access: (0664/-rw-rw-r--)  Uid: ( 1073/tarkaelkion)   Gid: ( 1075/tarkaelkion)
+Access: 2024-12-19 12:27:15.174795740 +0200
+Modify: 2024-12-19 12:25:59.862002869 +0200
+Change: 2024-12-19 12:25:59.862002869 +0200
+ Birth: -
+./example1.c
+#include <stdio.h>
+
+int main(void) {
+    int a = 5;
+    int b = 100;
+    int *ptr = &a;   // ptr points to a
+
+    printf("Value of a: %d\n", a);
+    printf("Value of b: %d\n", b);
+
+    // Change *ptr (which currently points to a)
+    *ptr = 10;
+    printf("After *ptr = 10, a: %d, b: %d\n", a, b);
+
+    // Make ptr point to b now
+    ptr = &b;
+    *ptr = 200;
+    printf("After *ptr = 200, a: %d, b: %d\n", a, b);
+
+    return 0;
+}
+#include <stdio.h>
+
+int main(void) {
+    int x = 10;      // A normal integer variable
+    int *p;          // p is a pointer to an integer
+
+    p = &x;          // p now holds the address of x
+
+    printf("Value of x: %d\n", x);
+    printf("Address of x: %p\n", (void*)&x);
+    printf("Value of p: %p\n", (void*)p);
+    printf("Value pointed to by p: %d\n", *p);
+
+    *p = 20;         // Change the value of x using the pointer
+    printf("New value of x: %d\n", x);
+
+    return 0;
+}
+#include <stdio.h>
+
+int main(void) {
+    int arr[5] = {10, 20, 30, 40, 50};
+    int *p = arr; // In C, array name often gives the address of the first element
+
+    // Print elements using array indexing
+    for (int i = 0; i < 5; i++) {
+        printf("arr[%d] = %d\n", i, arr[i]);
+    }
+  // *ptr1 = 15; // Error: cannot modify the value through ptr1
+    ptr1 = &y;      // But ptr1 can point to a different variable
+
+    // Constant pointer to an integer (pointer cannot change what it points to)
+    int * const ptr2 = &x;
+    *ptr2 = 30;      // Allowed: we can change the value
+    // ptr2 = &y;    // Error: cannot change the pointer’s target
+
+    return 0;
+}
+Cloning into 'OS'...
+Warning: Permanently added the ECDSA host key for IP address '140.82.121.4' to the list of known hosts.
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
